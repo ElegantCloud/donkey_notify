@@ -62,7 +62,8 @@ var GlobalNoticeRepo = {
 						nl[nl.length] = notice;
 					}
 					pack = {
-						'notice_list' : nl
+						notice_list : nl,
+						cmd : 'getall'
 					};
 				}
 				if (callback && typeof callback === 'function') {

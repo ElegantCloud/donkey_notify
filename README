@@ -1,1 +1,4 @@
 message notification center server, using Sokect.IO and Nodejs
+
+Usage:
+	node index.js > donkey_notify.log &

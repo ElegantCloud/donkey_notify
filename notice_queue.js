@@ -48,7 +48,8 @@ var NoticeQueue = {
 					}
 					
 					var pack = {
-						'notice_list' : nl
+						notice_list : nl,
+						cmd : 'cache'
 					};
 					if (callback && typeof callback === 'function') {
 						callback(pack);

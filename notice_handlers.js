@@ -99,7 +99,8 @@ var Handler = {
 			// var msgJson = JSON.parse(msg);
 			var msgList = [ msg ];
 			var notice = {
-				notice_list : msgList
+				notice_list : msgList,
+				cmd : 'notify'
 			};
 
 			var slist = topicList[topic];
