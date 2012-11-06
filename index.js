@@ -3,16 +3,18 @@
  */
 var express = require('express'), sio = require('socket.io');
 var noticeHandler = require('./notice_handlers');
+var http = require('http');
 
-
-var app = express.createServer();
+var app = express();
 app.use(express.bodyParser());
 
-var io = sio.listen(app);
+var server = http.createServer(app);
+
+var io = sio.listen(server);
 
 io.set('log level', 1);
 
-app.listen(80, '122.96.24.172');
+server.listen(8090);
 
 var rootPath = '/donkey_notify';
 
