@@ -19,6 +19,13 @@ server.listen(8090);
 var rootPath = '/donkey_notify';
 
 /**
+ * detect if server is alive
+ */
+app.get(rootPath + 'alive', function(request, response) {
+    response.send('ok');
+});
+
+/**
  * notify by post
  */
 app.post(rootPath + '/notify', function(request, response) {
