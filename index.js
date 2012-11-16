@@ -14,14 +14,14 @@ var io = sio.listen(server);
 
 io.set('log level', 1);
 
-server.listen(8090);
+server.listen(80, "192.168.1.110");
 
 var rootPath = '/donkey_notify';
 
 /**
  * detect if server is alive
  */
-app.get(rootPath + 'alive', function(request, response) {
+app.get(rootPath + '/alive', function(request, response) {
     response.send('ok');
 });
 
